@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sleep 6 && sh ~/.config/i3/scripts/ranger start&& sleep 2 && sh ~/.config/i3/scripts/dropdown_terminal start

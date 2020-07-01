@@ -1,0 +1,443 @@
+# ------ MAIN SETTINGS ------ #
+
+set $mod Mod1
+set $mod4 Mod4
+
+new_window pixel 1
+new_float normal
+hide_edge_borders none
+font SF Pro Display:style=Semibold:size=11
+floating_modifier $mod
+
+# ------ MAIN SETTINGS ------ #
+
+
+
+
+
+# ------ WORKSPACES ------ #
+
+# workspaces
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+
+
+# switch to workspace
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+
+# Move focused container to workspace
+bindsym $mod+Ctrl+1 move container to workspace number 1; workspace number 1
+bindsym $mod+Ctrl+2 move container to workspace number 2; workspace number 2
+bindsym $mod+Ctrl+3 move container to workspace number 3; workspace number 3
+bindsym $mod+Ctrl+4 move container to workspace number 4; workspace number 4
+bindsym $mod+Ctrl+5 move container to workspace number 5; workspace number 5
+bindsym $mod+Ctrl+6 move container to workspace number 6; workspace number 6
+bindsym $mod+Ctrl+7 move container to workspace number 7; workspace number 7
+bindsym $mod+Ctrl+8 move container to workspace number 8; workspace number 8
+
+# Move to workspace with focused container
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+
+# Focus window
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Next-Prev-New Workspaces
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+j exec --no-startup-id ~/.config/i3/scripts/newworkspace.sh
+
+# workspace back and forth (with/without active container)
+workspace_auto_back_and_forth yes
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
+
+# Assign Workspaces
+#for_window [class="Spotify"] move container to workspace $ws8
+
+# switch to workspace with urgent window automatically
+for_window [urgent=latest] focus
+
+# Farge float mode
+for_window [class="feh"] floating enable
+
+
+# ------ WORKSPACES ------ #
+
+
+
+
+
+# ------ RESIZE AND GAPS ------ #
+
+#i3 gaps
+for_window [class="^.*"] border pixel 0
+#client.focused #778892 #778892 #778892 #778892     #778892
+#client.unfocused #778892 #778892 #778892 #778892     #778892
+
+
+border_radius 10
+gaps inner 30
+gaps outer 0
+gaps top 10
+gaps bottom 0
+#smart_gaps on
+smart_borders on
+
+# %%hotkey: Resize window %%
+bindsym $mod+r mode "resize"
+mode "resize" {
+       
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # exit resize mode: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# %%hotkey: Gaps Mode %%
+bindsym $mod+Shift+g mode "$mode_gaps"
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_inner" {
+        bindsym 2  gaps inner current plus 5
+        bindsym 1 gaps inner current minus 5
+        bindsym 3     gaps inner current set 0
+
+        bindsym Shift+2  gaps inner all plus 5
+        bindsym Shift+1 gaps inner all minus 5
+        bindsym Shift+3     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym 2  gaps outer current plus 5
+        bindsym 1 gaps outer current minus 5
+        bindsym 3     gaps outer current set 0
+
+        bindsym Shift+2  gaps outer all plus 5
+        bindsym Shift+1 gaps outer all minus 5
+        bindsym Shift+3     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# ------ RESIZE AND GAPS ------ #
+
+
+
+
+
+# ------ SECOND MONITOR ------ #
+
+# second monitor ws
+#set $ws8 output VGA1
+#workspace $WS1 output VGA1
+#workspace $WS2 output VGA1
+
+#second monitor
+#exec --no-startup-id "xrandr --output VGA1 --auto --right-of eDP1"
+
+# %%hotkey: Move container right monitor %%
+#bindsym $mod+n move container to output right
+# %%hotkey: Move workspaces right monitor %%
+#bindsym $mod+m move workspace to output right
+# %%hotkey: Right monitor OFF %%
+#bindsym $mod+shift+n exec --no-startup-id "xrandr --output VGA1 --off"
+# %%hotkey: Right monitor ON %%
+#bindsym $mod+shift+m exec --no-startup-id "xrandr --output VGA1 --auto --right-of eDP1"
+
+# ------ SECOND MONITOR ------ #
+
+
+
+
+
+# ------ VOLUME AND BRIGHTNESS ------ #
+
+# %%hotkey: Volume up %%
+bindsym XF86AudioRaiseVolume exec --no-startup-id exec ~/.config/volume/volume.sh up
+# %%hotkey: Volume down %%
+bindsym XF86AudioLowerVolume exec --no-startup-id exec ~/.config/volume/volume.sh down
+bindsym $mod4+Right exec --no-startup-id exec ~/.config/volume/volume.sh up
+bindsym $mod4+Left exec --no-startup-id exec ~/.config/volume/volume.sh down
+
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+
+
+# %%hotkey: Brightness up %%
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/volume/brightness.sh up # increase screen brightness
+# %%hotkey: Brightness down %%
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/volume/brightness.sh down # decrease screen brightness
+bindsym $mod4+Up exec --no-startup-id ~/.config/volume/brightness.sh up # increase screen brightness
+bindsym $mod4+Down exec --no-startup-id ~/.config/volume/brightness.sh down # decrease screen brightness
+
+#bindsym XF86MonBrightnessUp exec xbacklight +10 # increase screen brightness
+#bindsym XF86MonBrightnessDown exec xbacklight -10 # decrease screen brightness
+
+# ------ VOLUME AND BRIGHTNESS ------ #
+
+
+
+
+
+# ------ HOTKEYS ------ #
+
+# %%hotkey: Tile Horizontally %%
+bindsym $mod+h split h;exec notify-send 'Tile Horizontally'
+
+# %%hotkey: Tile Vertically %%
+bindsym $mod+v split v;exec notify-send 'Tile Vertically'
+
+# %%hotkey: Split Toggle %%
+bindsym $mod+shift+Return split toggle
+
+# %%hotkey: Fullscreen Toggle %% 
+bindsym $mod+f fullscreen toggle
+
+# %%hotkey: Tabbed Layout %%
+bindsym $mod+w layout tabbed
+
+# %%hotkey: Split Tabbed Layout %%
+bindsym $mod+e layout toggle split
+
+# %%hotkey: Floating-Tiling Toggle %%
+bindsym $mod+Shift+space floating toggle
+
+# %%hotkey: Focus Mode Toggle %%
+#bindsym $mod+space focus mode_toggle
+
+# %%hotkey: Reload i3 %%
+bindsym $mod+Shift+c reload
+
+# %%hotkey: Restart i3 %%
+bindsym $mod+Shift+r restart
+
+# %%hotkey: Lock %%
+bindsym $mod+x exec "betterlockscreen -l dim & playerctl pause"
+
+# %%hotkey: Pyxtrlock-Brightnes %%
+bindsym $mod+ctrl+x exec "pyxtrlock & xbacklight -set 0"
+
+# %%hotkey: Lock %%
+bindsym $mod+shift+x exec "pyxtrlock"
+
+# %%hotkey: URxvt %%
+bindsym $mod+Return exec urxvt
+
+# %%hotkey: Window kill command %%
+bindsym $mod+q kill
+
+# %%hotkey: Minimal app launcher %%
+bindsym $mod+d exec --no-startup-id "rofi -show drun -config /home/altindas/.config/rofi/middle.rasi"
+
+# %%hotkey: Fullscreen app launcher %%
+bindsym $mod+Shift+d exec --no-startup-id "rofi -show drun -config /home/altindas/.config/rofi/sidebar-fc.rasi"
+
+# %%hotkey: Powermenu %%
+bindsym $mod+z exec --no-startup-id ~/.config/polybar/scripts/shutdown.sh
+
+# Touchpad controls
+#bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+
+#Powerkey control
+#bindsym XF86PowerOff exec --no-startup-id ~/.config/polybar/scripts/shutdown.sh 
+
+# %%hotkey: Printscreen %%
+bindsym Print exec ~/.config/polybar/scripts/screenshot.sh
+
+# %%hotkey: Flameshot %%
+bindsym Shift+Print exec "flameshot gui"
+
+# %%hotkey: Msi-keyboard light %%
+bindsym $mod+shift+k exec --no-startup-id "msi-keyboard -m normal -c left,orange,medium -c middle,orange,medium -c right,orange,medium"
+
+# %%hotkey: Clipboard Manager %%
+bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+# %%hotkey: Hide Tray %%
+bindsym $mod+shift+a exec "xdotool search --name tray windowmove --relative -- 0 -25"
+
+# %%hotkey: Show Tray %%
+bindsym $mod+shift+q exec "xdotool search --name tray windowmove --relative -- 0 +25"
+
+# %%hotkey: Hotkeys %%
+bindsym $mod+space exec --no-startup-id "/home/altindas/Belgeler/dmenu-hotkeys-master/bin/dmenu_hotkeys run --menu rofi --app i3"
+
+# %%hotkey: Hide tray %%
+bindsym $mod+Shift+h exec --no-startup-id hideIt.sh --name "Polybar tray window" --region 875x0+200+30 --direction top -p -5 -i 3
+#bindsym $mod+Shift+h exec --no-startup-id hideIt.sh --name "Polybar tray window" --region 817x1049+250+40 --direction bottom -p -5  
+
+# %%hotkey: Htop %%
+bindsym $mod+g exec --no-startup-id urxvt -hold -e "htop"
+
+# %%hotkey: Update (ş) %%
+bindsym $mod+scedilla exec --no-startup-id urxvt -hold -e "yay"
+
+# %%hotkey: Refresh Polybar (shift+ş) %%
+bindsym $mod+shift+scedilla exec --no-startup-id "rm -rf /tmp/polybar_mqueue.1 /tmp/polybar_mqueue.2 /tmp/polybar_mqueue.3 & sh ~/.config/polybar/launch.sh"
+
+# %%hotkey: X11 Key %%
+#bindsym xev
+
+# %%hotkey: Kill Notification (,) %%
+bindsym $mod+comma exec --no-startup-id notify-send "DUNST_COMMAND_PAUSE"
+
+# %%hotkey: Resume Notification (,) %%
+bindsym $mod+shift+comma exec --no-startup-id notify-send "DUNST_COMMAND_RESUME"
+
+# %%hotkey: Farge select color %%
+bindsym $mod+Shift+f --release exec farge
+
+# %%hotkey: Pavucontrol %%
+bindsym $mod+b exec --no-startup-id pavucontrol
+
+# %%hotkey: Thunar %%
+bindsym $mod+a exec --no-startup-id thunar
+
+# %%hotkey: Firefox %%
+bindsym $mod+s exec --no-startup-id firefox
+
+# %%hotkey: Spotify Lyrics %%
+bindsym $mod+shift+p exec --no-startup-id "~/.config/scripts/spotify-lyrics.sh"
+
+# %%hotkey: Telegram %%
+bindsym $mod+t exec --no-startup-id telegram-desktop
+
+# %%hotkey: Whatsapp %%
+bindsym $mod+y exec --no-startup-id whatsapp-nativefier-dark
+
+# %%hotkey: Android Messages %%
+bindsym $mod+u exec --no-startup-id android-messages-desktop
+
+# %%hotkey: ProtonMail (ı) %%
+bindsym $mod+idotless exec --no-startup-id protonmail-desktop
+
+# %%hotkey: Mailspring %%
+bindsym $mod+o exec --no-startup-id mailspring
+
+# %%hotkey: Spotify-Spotui %%
+#bindsym $mod+p exec --no-startup-id "env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U"
+bindsym $mod+p exec --no-startup-id spotify
+
+# %%hotkey: Youtube Music %%
+bindsym $mod+k exec --no-startup-id "/usr/lib/brave-bin/brave --profile-directory=Default --app-id=cinhimbnkkaeohfgghhklpknlkffjgod"
+
+# %%hotkey: Youtube %%
+bindsym $mod+l exec --no-startup-id "/usr/lib/brave-bin/brave --profile-directory=Default --app-id=adnlfjpnmidfimlkaohpidplnoimahfh"
+
+# %%hotkey: Calendar (ü) %%
+bindsym $mod+udiaeresis exec --no-startup-id minetime
+
+# %%hotkey: Standart Notes (ğ) %%
+bindsym $mod+gbreve exec --no-startup-id standardnotes-desktop
+
+# %%hotkey: Twitter %%
+bindsym $mod+i exec --no-startup-id cawbird
+
+# %%hotkey: Google Drive %%
+bindsym $mod+ctrl+d exec --no-startup-id vgrive
+
+# %%hotkey: Dropbox %%
+bindsym $mod+ctrl+f exec --no-startup-id dropbox
+
+# %%hotkey: Office %%
+bindsym $mod+shift+o exec --no-startup-id onlyoffice-desktopeditors
+
+# %%hotkey: Mount Android File Transfer %%
+bindsym $mod+ctrl+m exec --no-startup-id "jmtpfs ~/Belgeler/Android"
+
+# %%hotkey: Unmount Android File Transfer %%
+bindsym $mod+ctrl+n exec --no-startup-id "fusermount -u ~/Belgeler/Android"
+
+# %%hotkey: Reflect Android Screen %%
+#bindsym scrcpy
+
+# ------ HOTKEYS ------ #
+
+
+
+
+
+
+# ------ EXEC STARTUP ------ #
+
+exec_always compton --config ~/.config/compton.conf
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id msi-keyboard -m normal -c left,orange,medium -c middle,orange,medium -c right,orange,medium
+exec_always --no-startup-id numlockx on
+exec --no-startup-id easystroke
+exec_always --no-startup-id ~/.config/wpg/wp_init.sh
+exec_always --no-startup-id /usr/bin/dunst
+exec_always --no-startup-id udiskie -ans --file-manager=thunar
+exec_always --no-startup-id "xrandr --output eDP1 --brightness 1.3"
+exec --no-startup-id flameshot
+exec_always --no-startup-id xautolock -detectsleep -time 5 -corners ---- -cornersize 30 -notify 30 -notifier "notify-send -u critical -i /usr/share/icons/hicolor/48x48/apps/gcr-password.png 'Locking screen in 30 seconds' -t 30000 & playerctl pause" -locker "betterlockscreen -l dim" -killtime 15 -killer "systemctl suspend"
+exec_always --no-startup-id xautolock -time 15 -corners ---- -cornersize 30 -locker "systemctl suspend"
+exec --no-startup-id "greenclip daemon"
+exec --no-startup-id /usr/lib/kdeconnectd
+exec --no-startup-id indicator-kdeconnect
+exec_always --no-startup-id ~/.config/scripts/alternating_layouts.py
+exec_always --no-startup-id i3wsr --config ~/.config/i3wsr/config.toml --icons awesome
+exec --no-startup-id mailspring
+exec --no-startup-id protonmail-desktop
+exec --no-startup-id android-messages-desktop
+exec --no-startup-id whatsapp-nativefier-dark
+exec --no-startup-id minetime
+
+#exec --no-startup-id dropbox
+#exec --no-startup-id google-drive-ocamlfuse
+#exec_always feh --bg-scale ~/Resimler/a.jpg
+#exec_always --no-startup-id blueman-applet
+#exec_always --no-startup-id nm-applet
+#exec_always --no-startup-id "setxkbmap tr"
+
+
+# ------ EXEC STARTUP ------ #
+

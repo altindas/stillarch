@@ -1,0 +1,24 @@
+[aliases]
+Navigator = "Firefox"
+thunar = "Thunar"
+urxvt = "URxvt"
+gedit = "Gedit"
+firefox = "Firefox"
+minetime = "Calendar"
+mailspring = "Mail"
+"protonmail desktop (unofficial)" = "Mail"
+telegram-desktop = "Telegram"
+spotify = "Spotify"
+crx_cinhimbnkkaeohfgghhklpknlkffjgod = "YMusic"
+android-messages-desktop = "Message"
+whatsapp-nativefier-d52542 = "Whatsapp"
+"Org.gnome.Nautilus" = "Nautilus"
+
+[general]
+separator = "  |  "
+default_icon = ""
+
+[options]
+remove_duplicates = true
+use_instance = true
+no_names = true
