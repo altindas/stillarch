@@ -1,0 +1,19 @@
+[colors]
+
+background = #0a0908
+foreground = #FFFFFF
+primary = #5A4F4D
+secondary = #A36251
+alert = #FF0000
+
+workspaces = #C5523C
+
+right0 = #0a0908
+right1 = #5A4F4D
+right2 = #981C13
+right3 = #C5523C
+right4 = #A36251
+right5 = #B18967
+right6 = #E1986B
+right7 = #beb8bc
+right8 = #858083

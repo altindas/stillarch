@@ -1,0 +1,85 @@
+configuration {
+    display-run:                   "Apps";
+    display-drun:                   "Apps";
+    display-window:                 "Window";
+    show-icons:true;
+    icon-theme:                     "McMojave-circle";
+}
+/* backg color0, text color15 */ 
+* {
+    lines: 5;
+    columns: 1;
+    background-color: #0A0908;
+    border-color: #00000000;
+    text-color: #B18967;
+    font: "Inconsolata Bold 17";
+}
+ 
+#window {
+    fullscreen: true;
+    border: 0;
+    border-radius: 5px;
+    padding: 350;
+    width: 50%;
+    height: 100%;
+}
+ 
+#mainbox {
+    background-color: #00000000;
+    children: [inputbar, listview];
+    spacing: 10px;
+    /*margin: 20%;*/
+    padding: 7px 0;
+    border: 1px;
+    border-color: @base0D;
+}
+ 
+ 
+#listview {
+    background-color: #00000000;
+    fixed-height: 0;
+    border: 0px;
+    spacing: 5px;
+    scrollbar: false;
+    padding: 10px 300px 10px;
+}
+ 
+#element {
+    background-color: #00000000;
+    border: 3;
+    border-radius: 12px;
+    padding: 10 0 10 10 ;
+}
+
+/* backg color 3- text color0 */ 
+#element selected {
+    background-color: #C5523C;
+    text-color: #0A0908;
+}
+ 
+ 
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    background-color: #00000000;
+}
+ 
+#case-indicator {
+    background-color: #00000000;
+    spacing:    0;
+}
+#entry {
+    background-color: #00000000;
+    spacing:    0;
+}
+#prompt {
+    background-color: #00000000;
+    spacing:    0;
+}
+ 
+#textbox-prompt-colon {
+    background-color: #00000000;
+    expand:     false;
+    str:        ":";
+    margin:     0px 0em 0em 0em ;
+}
+

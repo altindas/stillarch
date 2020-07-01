@@ -1,0 +1,751 @@
+[colors]
+
+include-file = ~/.config/polybar/color
+
+
+# ----- ANA BAR ----- #
+
+[bar/example]
+;monitor = ${env:MONITOR:HDMI-1}
+;monitor = eDP1
+width = 100%
+height = 25
+offset-x = 0
+offset-y = 0
+radius = 0
+fixed-center = true
+enable-ipc = true
+
+background = ${colors.background}
+foreground = ${colors.right7}
+
+line-size = 2
+line-color = #f00
+
+#border-size = 0
+#border-color = #00000000
+border-bottom-size = 0
+border-color = ${colors.background}
+
+padding-left = 3
+padding-right = 5
+
+module-margin = 1
+
+
+font-0 = SF Pro Display:style=Semibold:size=9;1
+font-1 = "icomoon:size=3;1"
+font-2 = FontAwesome5Free:style=Solid:size=8;1
+#font-3 = Iosevka Nerd Font:style=Medium:size=5;2
+font-3 = Wuncon Siji:size=15;1
+font-4 = SF Pro Rounded:style=Semibold:size=10;1
+font-5 = MaterialIcons:size=9;1
+font-6 = SF Pro Rounded:style=Semibold:size=10;1
+font-7 = WeatherIcons:size=8;1
+
+
+modules-left = jgmenu i3 menu temperature cpucpu memory sep storage usb bluetooth  xkeyboard bottombar dropdownterminal
+modules-center =  datescript 
+modules-right =  update-notify  update weathermap sep  wifinetwork wifiname network-traffic   sep  pulseaudio sct xbacklight battery
+
+tray-position = center
+tray-padding = 7
+tray-transparent = true
+tray-background = ${colors.background}
+
+#wm-restack = bspwm
+#wm-restack = i3
+
+override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+
+# ----- music BAR ----- #
+
+[bar/example1]
+;monitor = ${env:MONITOR:HDMI-1}
+;monitor = eDP1
+width = 20%
+height = 65
+offset-x = 765
+offset-y = -10
+radius = 30
+fixed-center = true
+enable-ipc = true
+bottom = false
+
+background = ${colors.background}
+foreground = ${colors.right7}
+
+line-size = 2
+line-color = #f00
+
+#border-size = 0
+#border-color = #00000000
+border-bottom-size = 0
+border-color = ${colors.background}
+
+padding-left = 0
+padding-right = 0
+
+module-margin = 0
+
+
+font-0 = SF Pro Display:style=Semibold:size=9;25
+font-1 = "icomoon:size=3;25"
+font-2 = FontAwesome5Free:style=Solid:size=8;25
+#font-3 = Iosevka Nerd Font:style=Medium:size=5;2
+font-3 = Wuncon Siji:size=15;25
+font-4 = SF Pro Rounded:style=Semibold:size=10;25
+font-5 = MaterialIcons:size=9;25
+font-6 = SF Pro Rounded:style=Semibold:size=10;25
+font-7 = WeatherIcons:size=8;25
+
+
+modules-left = 
+modules-center =  previous player-mpris-simple spotify next
+modules-right =  
+
+#tray-position = center
+#tray-padding = 7
+#tray-transparent = true
+#tray-background = ${colors.background}
+
+#wm-restack = bspwm
+wm-restack = i3
+
+override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+
+# ----- gizli BAR ----- #
+
+[bar/gizli]
+;monitor = ${env:MONITOR:HDMI-1}
+;monitor = eDP1
+width = 100%
+height = 22
+offset-x = 0
+offset-y = 0
+radius = 0
+fixed-center = true
+enable-ipc = true
+bottom = false
+
+background = ${colors.background}
+foreground = ${colors.right7}
+
+line-size = 2
+line-color = #f00
+
+#border-size = 0
+#border-color = #00000000
+border-bottom-size = 0
+border-color = ${colors.background}
+
+padding-left = 0
+padding-right = 0
+
+module-margin = 0
+
+
+font-0 = SF Pro Display:style=Semibold:size=9;23
+font-1 = "icomoon:size=3;23"
+font-2 = FontAwesome5Free:style=Solid:size=8;23
+#font-3 = Iosevka Nerd Font:style=Medium:size=5;2
+font-3 = Wuncon Siji:size=15;23
+font-4 = SF Pro Rounded:style=Semibold:size=10;23
+font-5 = MaterialIcons:size=9;23
+font-6 = SF Pro Rounded:style=Semibold:size=10;23
+font-7 = WeatherIcons:size=8;23
+
+
+modules-left = space
+modules-center =
+modules-right =  
+
+#tray-position = left
+#tray-padding = 7
+#tray-transparent = true
+#tray-background = ${colors.background}
+
+#wm-restack = bspwm
+#wm-restack = i3
+
+override-redirect = false
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+
+
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+#pin-workspaces = true
+
+label-mode-padding = 1
+
+#label-focused = %index%
+#label-focused-overline = ${colors.right3}
+label-focused-foreground = ${colors.right3}
+label-focused-padding = 2
+
+#label-unfocused = %index%
+label-unfocused-foreground = ${colors.right7}
+label-unfocused-padding = 2
+
+#label-visible = %index%
+#label-visible-overline = ${colors.right5}
+label-visible-foreground = ${colors.right5}
+label-visible-padding = 2
+
+#label-urgent = "!%index%!"
+label-urgent-foreground = #FF0000
+#label-urgent-overline = #FF0000
+label-urgent-padding = 2
+
+
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+#format-prefix = "      "
+#format-prefix-foreground = ${colors.foreground}
+#format-prefix-background = ${colors.right2}
+#format-prefix-underline = ${colors.secondary}
+
+label-layout = " "
+#label-layout-underline = ${colors.secondary}
+#label-layout-background = ${colors.right2}
+
+label-indicator-padding = 15
+label-indicator-margin = 2
+#label-indicator-background = ${colors.right3}
+label-indicator-overline = ${colors.right3}
+
+
+[module/title]
+type = internal/xwindow
+format = <label>
+format-padding = 1
+label = %title%
+#label-overline = ${colors.right3}
+label-maxlen = 25
+label-empty = Empty
+label-empty-foreground = ${colors.background}
+
+
+[module/cpucpu]
+type = custom/script
+interval = 2
+format-prefix = "     "
+exec = ~/.config/polybar/scripts/cpu/fs.sh
+click-left = ~/.config/polybar/scripts/cpu/genislet.sh
+click-right = ~/.config/polybar/scripts/cpu/daralt.sh
+
+
+[module/xbacklight]
+type = internal/backlight
+card = intel_backlight
+format = <label>
+format-padding = 0
+#format-background = ${colors.right5}z
+label = "    %percentage%%"
+
+
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+#format-prefix-foreground = ${colors.foreground}
+label = " %percentage%%"
+format-prefix = "   "
+#format-background = ${colors.right6}
+
+
+[module/memory]
+format-prefix = "      "
+#format-underline = #4bffdc
+type = custom/script
+exec = ~/.config/polybar/scripts/mem.sh
+interval = 5
+#format-background = ${colors.right5}
+
+
+
+[module/date]
+type = internal/date
+interval = 5
+time = "    %H:%M   -     %A, %B %d"
+#date = "  %A, %B %d"
+#date-alt = "  %a %d %b"
+#time = "  %H:%M"
+time-alt = "    %H:%M"
+#format-prefix = "    "
+#format-prefix-foreground = ${colors.foreground}
+#format-underline = #0a6cf5
+label = "%time% "
+label-font = 5
+#format-background = ${colors.right2}
+
+
+[module/datescript]
+type = custom/script
+exec = ~/.config/polybar/scripts/date.sh
+interval = 60
+click-middle = ~/.config/polybar/scripts/popcal
+label-font = 5
+click-left = "~/.config/i3/scripts/dropdown_terminal toggle"
+click-right = "~/.config/i3/scripts/ranger toggle"
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+use-ui-max = true
+format-volume = <ramp-volume> <label-volume> 
+#format-volume-underline = #7fe5f0
+label-volume = "%percentage%%"
+#label-volume-foreground = ${root.foreground}
+label-muted =  muted
+label-muted-foreground = #FF0000
+#label-muted-background = ${colors.right4}
+#format-muted-underline = #ff0000
+#format-volume-background = ${colors.right4}
+
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${xrdb:color2:#i55aa55}
+bar-volume-foreground-1 = ${xrdb:color2:#55aa55}
+bar-volume-foreground-2 = ${xrdb:color2:#55aa55}
+bar-volume-foreground-3 = ${xrdb:color10:#55aa55}
+bar-volume-foreground-4 = ${xrdb:color10:#55aa55}
+bar-volume-foreground-5 = ${xrdb:color10:#f5a70a}
+bar-volume-foreground-6 = ${xrdb:color10:#ff5555}
+bar-volume-foreground-7 = ${xrdb:color10:#ff5555}
+bar-volume-foreground-8 = ${xrdb:color9:#ff5555}
+bar-volume-foreground-9 = ${xrdb:color9:#ff5555}
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground}
+
+ramp-volume-0 ="    "
+ramp-volume-1 ="    "
+ramp-volume-2 ="    "
+
+ramp-headphones-0 ="    "
+ramp-headphones-1 ="    "
+
+
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 3
+warn-temperature = 70
+#format = <ramp> <label>
+format = <label>
+#format-background = ${colors.right3}
+format-warn = <label-warn>
+#format-warn-underline = ${self.format-underline}
+format-prefix = "    "
+format-warn-prefix = "    "
+label = %temperature-c%
+label-warn = %temperature-c%
+#label-warn-foreground = #FF0000
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+
+
+
+
+[module/battery]
+type = internal/battery
+label-volume = Bat
+battery = BAT1
+adapter = ADP1
+full-at = 95
+#format-charging-background = ${colors.right6}
+#format-discharging-background = ${colors.right6}
+#format-full-background = ${colors.right6}
+#format-prefix = "      "
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+#format-charging-underline = #ffb52a
+#format-discharging-underline = ${self.format-charging-underline}
+format-full-prefix = "      "
+#format-full-prefix-foreground = ${colors.foreground}
+#format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = "       "
+ramp-capacity-1 = "       "
+ramp-capacity-2 = "       "
+ramp-capacity-3 = "       "
+ramp-capacity-4 = "       "
+#ramp-capacity-foreground = ${colors.foreground}
+
+animation-charging-0 = "       "
+animation-charging-1 = "       "
+animation-charging-2 = "       "
+animation-charging-3 = "       "
+animation-charging-4 = "       "
+#animation-charging-foreground = ${colors.foreground}
+animation-charging-framerate = 500
+
+
+[module/powermenu]
+type = custom/menu
+format-spacing = 1
+format-font = 7
+label-open = "   |   "
+label-open-foreground = ${colors.right3}
+label-close =  cancel
+label-close-foreground = ${colors.right3}
+label-separator = " | "
+label-separator-foreground = ${colors.foreground}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+menu-0-2 = suspend
+menu-0-2-exec = menu-open-3
+
+menu-1-0 = reboot
+menu-1-0-exec = reboot
+menu-1-1 = cancel
+menu-1-1-exec = menu-open-0
+
+menu-2-0 = power off
+menu-2-0-exec = poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+menu-3-0 = suspend
+menu-3-0-exec = i3lock-fancy & systemctl suspend
+menu-3-1 = cancel
+menu-3-1-exec = menu-open-0
+
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+; vim:ft=dosini
+
+
+[module/system-cpu-frequency]
+format-prefix = "    "
+#format-background = ${colors.right4}
+type = custom/script
+exec = ~/.config/polybar/scripts/system-cpu-frequency.sh
+interval = 5
+
+
+
+[module/network-traffic]
+#format-underline = #6666cc
+#format-background = ${colors.right3}
+type = custom/script
+exec = ~/.config/polybar/scripts/network-traffic.sh
+tail = true
+
+
+
+[module/kernel]
+#format-underline = #D7E1E9
+type = custom/script
+exec = ~/.config/polybar/scripts/kernel.sh
+interval = 3600
+
+
+
+[module/uptime]
+#format-underline = #BCA1C9
+type = custom/script
+exec = ~/.config/polybar/scripts/uptime.sh
+interval = 60
+
+
+
+[module/spotify]
+type = custom/script
+interval = 2
+format-prefix = "      "
+format = "<label>  "
+label-font = 5
+format-font = 5
+exec = python ~/.config/polybar/scripts/spotify.py -f '{artist}: {song}' 
+#format-underline = ${colors.right2}
+#format-background = ${colors.right3}
+click-left = playerctl --player=spotify previous  &
+click-right = playerctl --player=spotify next  &
+click-middle = playerctl --player=spotify play-pause  &
+scroll-up = ~/.config/volume/volume.sh up
+scroll-down = ~/.config/volume/volume.sh down
+
+
+
+[module/next]
+type = custom/script
+interval = 5
+format = "<label>"
+format-padding = 0
+exec = echo "          "
+line-size = 1
+click-left = playerctl next 
+
+
+
+[module/previous]
+type = custom/script
+interval = 5
+format = "<label>"
+format-padding = 0
+exec = echo "          "
+line-size = 1
+click-left = playerctl  previous
+
+
+
+[module/space]
+format-prefix = "      "
+type = custom/script
+exec = ~/.config/polybar/scripts/space.sh
+interval = 60
+
+[module/space1]
+format-prefix = " "
+type = custom/script
+exec = ~/.config/polybar/scripts/space1.sh
+interval = 60
+
+
+[module/wifinetwork]
+type = internal/network
+interface = wlp5s0
+interval = 1.0
+accumulate-stats = true
+unknown-as-up = true
+format-connected = <ramp-signal>
+#format-connected-background = ${color.shade3}
+#format-connected-background = ${colors.right3}
+format-connected-padding = 0
+#format-disconnected = <label-disconnected>
+#format-disconnected-background = ${colors.right3}
+#format-disconnected-foreground = ${color.modulefg}
+#format-disconnected-padding = 1
+#label-connected = ""
+label-connected = " %essid%"
+label-disconnected = " "
+label-disconnected-foreground = #FF0000
+ramp-signal-0 = " "
+ramp-signal-1 = " "
+ramp-signal-2 = " "
+ramp-signal-3 = " "
+ramp-signal-4 = " "
+
+
+
+[module/jgmenu]
+type = custom/script
+interval = 120
+exec = echo "   "
+click-right = "jgmenu_run >/dev/null 2>&1 &"
+format-foreground = ${colors.right2}
+#format-background = ${colors.right3}
+#format-overline = ${colors.background}
+click-left = "rofi -show drun -config /home/altindas/.config/rofi/sidebar.rasi"
+
+[module/update]
+type = custom/script
+exec = ~/.config/polybar/scripts/update.sh
+interval = 600
+
+[module/update-notify]
+type = custom/script
+exec = ~/.config/polybar/scripts/update-notify.sh
+interval = 3600
+
+[module/menu]
+type = custom/menu
+format-spacing = 1
+label-open = "  |  "
+click-right = ~/.config/i3/scripts/newworkspace.sh
+format-font = 7
+label-open-foreground = ${colors.right3}
+label-close =  Cancel
+label-close-foreground = ${colors.right5}
+label-separator = "  |  "
+label-separator-foreground = ${colors.right3}
+
+
+menu-0-0 = Shutdown
+menu-0-0-exec = ~/.config/polybar/scripts/shutdown.sh &
+menu-0-1 = New-Workspace
+menu-0-1-exec = ~/.config/i3/scripts/newworkspace.sh &
+menu-0-2 = Urxvt
+menu-0-2-exec = urxvt &
+menu-0-3 = Thunar
+menu-0-3-exec = thunar &
+menu-0-4 = Firefox
+menu-0-4-exec = firefox &
+menu-0-5 = Brave
+menu-0-5-exec = brave &
+menu-0-6 = Spotify
+menu-0-6-exec = env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U &
+menu-0-7 = Telegram
+menu-0-7-exec = telegram-desktop &
+menu-0-8 = aMessages
+menu-0-8-exec = android-messages-desktop &
+menu-0-9 = Whatsapp
+menu-0-9-exec = whatsapp-nativefier-dark &
+menu-0-10 = Mailspring
+menu-0-10-exec = mailspring
+menu-0-11 = Protonmail
+menu-0-11-exec = protonmail-desktop
+
+
+[module/sep]
+type = custom/text
+content = "   |   "
+content-foreground = ${colors.right3}
+content-font = 7
+click-left = ~/.config/i3/scripts/newworkspace.sh
+
+
+[module/sep2]
+type = custom/script
+format = "<label>"
+format-foreground = ${colors.right3}
+format-padding = 0
+exec = echo "   |   "
+click-left = ~/.config/i3/scripts/newworkspace.sh
+label-font = 7
+
+
+[module/sep3]
+type = custom/script
+interval = 5
+exec = echo "   |   "
+exec-if = "pgrep spotify"
+format-margin = 1
+format-foreground = ${colors.right5}
+
+[module/player-mpris-simple]
+type = custom/script
+label-font = 5
+format-font = 5
+exec = ~/.config/polybar/scripts/player-mpris-simple.sh
+interval = 3
+click-left = playerctl previous &
+click-right = playerctl next &
+click-middle = playerctl play-pause &
+scroll-up = sh ~/.config/volume/volume.sh up
+scroll-down = sh ~/.config/volume/volume.sh down
+
+
+[module/sct]
+type = custom/ipc
+hook-0 = ~/.config/polybar/scripts/sct/sct.sh getstatus && polybar-msg -p 1 hook sct 1 > /dev/null
+#hook-0 = ~/.config/polybar/scripts/sct/sct.sh gettemp && polybar-msg -p 1 hook sct 1 > /dev/null
+initial = 1
+format-background = ${colors.background}
+format-padding = 2
+click-left = sh ~/.config/polybar/scripts/sct/sctswitcher.sh
+click-right = sh ~/.config/polybar/scripts/sct/sctswitcher.sh
+scroll-up = sh ~/.config/volume/brightness.sh up
+scroll-down = sh ~/.config/volume/brightness.sh down
+
+
+[module/wifiname]
+type = custom/ipc
+hook-0 = ~/.config/polybar/scripts/wifi/sct.sh getstatus && polybar-msg -p 1 hook wifiname 1 > /dev/null
+#hook-0 = ~/.config/polybar/scripts/wifi/sct.sh gettemp && polybar-msg -p 1 hook wifiname 1 > /dev/null
+initial = 1
+format-background = ${colors.background}
+format-padding = 2
+click-left = sh ~/.config/polybar/scripts/wifi/sctswitcher.sh
+click-right = sh ~/.config/polybar/scripts/wifi/sctswitcher.sh
+scroll-up = sh ~/.config/polybar/scripts/wifi/sctswitcher.sh
+scroll-down = sh ~/.config/polybar/scripts/wifi/sctswitcher.sh
+
+[module/storage]
+type = custom/ipc
+hook-0 = ~/.config/polybar/scripts/storage/sct.sh getstatus && polybar-msg -p 1 hook storage 1 > /dev/null
+#hook-0 = ~/.config/polybar/scripts/storage/sct.sh gettemp && polybar-msg -p 1 hook storage 1 > /dev/null
+initial = 1
+format-background = ${colors.background}
+format-padding = 2
+click-left = sh ~/.config/polybar/scripts/storage/sctswitcher.sh
+click-right = sh ~/.config/polybar/scripts/storage/sctswitcher.sh
+scroll-up = sh ~/.config/polybar/scripts/storage/sctswitcher.sh
+scroll-down = sh ~/.config/polybar/scripts/storage/sctswitcher.sh
+
+[module/usb]
+type = custom/script
+exec = ~/.config/polybar/scripts/usb.sh
+tail = true
+click-left = ~/.config/polybar/scripts/usb.sh --mount &
+click-right = ~/.config/polybar/scripts/usb.sh --unmount &
+
+[module/bluetooth]
+type = custom/script
+exec = ~/.config/polybar/scripts/bluetooth.sh
+tail = true
+
+[module/weathermap]
+type = custom/script
+exec = ~/.config/polybar/scripts/weather.sh
+interval = 600
+label-font = 8
+click-left = "~/.config/i3/scripts/dropdown_terminal toggle"
+click-right = "~/.config/i3/scripts/ranger toggle"
+
+
+[module/bottombar]
+type = custom/script
+format = "<label>"
+label = " "
+exec = ~/.config/polybar/scripts/bottombar.sh
+interval = 2
+
+[module/dropdownterminal]
+type = custom/script
+format = "<label>"
+label = " "
+exec = ~/.config/i3/scripts/sleep
+interval = 7200
+

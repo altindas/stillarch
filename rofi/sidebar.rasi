@@ -1,0 +1,61 @@
+configuration {
+  show-icons: true;
+  icon-theme: "Papirus";
+  size: 64;
+  location: 7; // top-left
+}
+
+/*back 0, text 15 */
+* {
+  background-color: #0A0908;
+  text-color: #BEB8BC;
+}
+
+window {
+  fullscreen: false;
+  font: "Inconsolata Bold 13";
+  width: 25%;
+  height: 97.9%;
+  border-radius: 0px;
+}
+
+prompt { enabled: false; }
+
+/* backg 3, color 0 */
+entry {
+  padding: 10px 0 10px 0;
+  horizontal-align: 0.5;
+  margin: 5% 5% 0% 5%;
+  color: #0A0908;
+  background-color: #C5523C;
+  font: "Inconsolata Bold 13";
+  border-radius: 20px;
+  placeholder: "Search";
+}
+
+listview {
+  columns: 2;
+  padding: 1.5%;
+  margin: 5% 0% 5% 0%;
+}
+
+element {
+  padding: 1.4%;
+  margin: 1% 0.3% 1% 0.3%;
+  orientation: vertical;
+}
+
+/* text 0, back 3 */
+element selected {
+  text-color: #0A0908;
+  background-color: #C5523C;
+  border-radius: 10px;
+}
+
+element-icon {
+  size: 40;
+}
+
+element-text {
+  horizontal-align: 0.5;
+}
