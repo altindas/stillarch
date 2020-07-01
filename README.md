@@ -15,3 +15,7 @@ i3 Keyblind Hotkeys w rofi
 
 Clipboard Manager w Rofi ( rofi-greenclip )
 ![Image description](https://github.com/altindas/stillarch/blob/master/Screenshots/2020-07-01_22:20:15_FS.png)
+
+
+Powermenu
+![Image description](https://github.com/altindas/stillarch/blob/master/Screenshots/2020-07-01_22:54:37_FS.png)
