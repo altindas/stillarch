@@ -19,9 +19,9 @@ Clipboard Manager w Rofi ( rofi-greenclip )
 Powermenu
 ![Powermenu](https://github.com/altindas/stillarch/blob/master/Screenshots/2020-07-01_22:54:37_FS.png)
 
-Dropdown Terminal
+Dropdown File Manager - MC 
 ![](https://github.com/altindas/stillarch/blob/master/Screenshots/jqZD1t5mOY1hb9EW59.gif)
 
 
-Dropdown File Manager - MC 
+Dropdown Terminal
 ![](https://github.com/altindas/stillarch/blob/master/Screenshots/jsNY0lq8tNTncMtwn9.gif)
