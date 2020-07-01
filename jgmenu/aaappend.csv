@@ -1,0 +1,18 @@
+Firefox,firefox,firefox
+Brave,brave,brave
+Thunar,thunar,thunar
+Urxvt,urxvt,urxvt
+Telegram,telegram-desktop,telegram-desktop
+Spotify,env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U,env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U
+Disks,gnome-disks,gnome-disks
+Dropbox,dropbox,dropbox
+Joplin,joplin-desktop,joplin-desktop
+Libre Office,libreoffice,libreoffice
+MS Office,ms-office-online-nativefier,ms-office-online-nativefier
+Wpg,wpg,wpg
+- - - -
+Pamac,pamac-manager,pamac-manager
+Network Manager,nm-applet,nm-applet
+Bluetooth,blueman-applet,blueman-applet
+Apps,thunar /usr/share/-applications/,thunar /usr/share/-applications/
+
