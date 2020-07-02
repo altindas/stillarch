@@ -20,8 +20,7 @@ Powermenu
 ![Powermenu](https://github.com/altindas/stillarch/blob/master/Screenshots/2020-07-01_22:54:37_FS.png)
 
 Dropdown File Manager - MC 
-![](https://gfycat.com/snappyaffectionatelcont)
-
+https://streamable.com/r437bi
 
 Dropdown Terminal
-![](https://github.com/altindas/stillarch/blob/master/Screenshots/jsNY0lq8tNTncMtwn9.gif)
+https://streamable.com/ll1dxk
