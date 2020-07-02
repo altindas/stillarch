@@ -1,3 +1,12 @@
+
+Dropdown File Manager - MC 
+https://streamable.com/r437bi
+
+Dropdown Terminal
+https://streamable.com/ll1dxk
+
+
+
 Spotui & Music bar pop-up
 ![Image description](https://github.com/altindas/stillarch/blob/master/Screenshots/2020-07-01_22:06:10_FS.png)
 
@@ -18,9 +27,3 @@ Clipboard Manager w Rofi ( rofi-greenclip )
 
 Powermenu
 ![Powermenu](https://github.com/altindas/stillarch/blob/master/Screenshots/2020-07-01_22:54:37_FS.png)
-
-Dropdown File Manager - MC 
-https://streamable.com/r437bi
-
-Dropdown Terminal
-![](https://streamable.com/ll1dxk)
