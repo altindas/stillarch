@@ -8,6 +8,7 @@ Dropdown Terminal --> Click left to watch video.
 
 Spotui & Music bar pop-up
 ![Image description](https://github.com/altindas/stillarch/blob/master/Screenshots/2020-07-01_22:06:10_FS.png)
+![Image description](https://github.com/altindas/stillarch/blob/master/Screenshots/musicbar.png)
 
 Clear & Extended Bar
 ![Image description](https://github.com/altindas/stillarch/blob/master/Screenshots/2020-07-01_22:07:23_FS.png)
