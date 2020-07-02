@@ -1,14 +1,8 @@
-Dropdown File Manager - MC 
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://streamable.com/r437bi)
+Dropdown File Manager - MC --> Click left to watch video.
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://streamable.com/r437bi)
 
-
-Dropdown File Manager - MC 
-https://streamable.com/r437bi
-
-Dropdown Terminal
-https://streamable.com/ll1dxk
-
-
+Dropdown Terminal --> Click left to watch video.
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://streamable.com/ll1dxk)
 
 Spotui & Music bar pop-up
 ![Image description](https://github.com/altindas/stillarch/blob/master/Screenshots/2020-07-01_22:06:10_FS.png)
