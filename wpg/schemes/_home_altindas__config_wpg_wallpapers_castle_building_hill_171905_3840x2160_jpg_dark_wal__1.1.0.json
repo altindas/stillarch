@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/altindas/.config/wpg/wallpapers/castle_building_hill_171905_3840x2160.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0f0304",
+        "foreground": "#dec4c9",
+        "cursor": "#dec4c9"
+    },
+    "colors": {
+        "color0": "#0f0304",
+        "color1": "#744752",
+        "color2": "#971C33",
+        "color3": "#97616E",
+        "color4": "#B07886",
+        "color5": "#C17D8E",
+        "color6": "#B78A96",
+        "color7": "#dec4c9",
+        "color8": "#9b898c",
+        "color9": "#744752",
+        "color10": "#971C33",
+        "color11": "#97616E",
+        "color12": "#B07886",
+        "color13": "#C17D8E",
+        "color14": "#B78A96",
+        "color15": "#dec4c9"
+    }
+}

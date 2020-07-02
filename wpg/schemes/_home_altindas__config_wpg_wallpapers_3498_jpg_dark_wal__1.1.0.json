@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/altindas/.config/wpg/wallpapers/3498.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#06040E",
+        "foreground": "#c4a1c0",
+        "cursor": "#c4a1c0"
+    },
+    "colors": {
+        "color0": "#06040E",
+        "color1": "#69485E",
+        "color2": "#9E2B50",
+        "color3": "#A4394A",
+        "color4": "#DC3052",
+        "color5": "#EF5E62",
+        "color6": "#F89F62",
+        "color7": "#c4a1c0",
+        "color8": "#897086",
+        "color9": "#69485E",
+        "color10": "#9E2B50",
+        "color11": "#A4394A",
+        "color12": "#DC3052",
+        "color13": "#EF5E62",
+        "color14": "#F89F62",
+        "color15": "#c4a1c0"
+    }
+}

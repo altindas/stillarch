@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/altindas/.config/wpg/wallpapers/firewatch-landscape-wallpaper-background-59165-60949-hd-wallpapers.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0E1B23",
+        "foreground": "#dae3ea",
+        "cursor": "#dae3ea"
+    },
+    "colors": {
+        "color0": "#0E1B23",
+        "color1": "#5A92B7",
+        "color2": "#669BBD",
+        "color3": "#6D9FC1",
+        "color4": "#8FB3CC",
+        "color5": "#ABC8DB",
+        "color6": "#BFD5E3",
+        "color7": "#dae3ea",
+        "color8": "#989ea3",
+        "color9": "#5A92B7",
+        "color10": "#669BBD",
+        "color11": "#6D9FC1",
+        "color12": "#8FB3CC",
+        "color13": "#ABC8DB",
+        "color14": "#BFD5E3",
+        "color15": "#dae3ea"
+    }
+}

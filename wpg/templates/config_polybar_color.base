@@ -1,0 +1,19 @@
+[colors]
+
+background = {color0}
+foreground = #FFFFFF
+primary = {color1}
+secondary = {color4}
+alert = #FF0000
+
+workspaces = {color3}
+
+right0 = {color0}
+right1 = {color1}
+right2 = {color2}
+right3 = {color3}
+right4 = {color4}
+right5 = {color5}
+right6 = {color6}
+right7 = {color7}
+right8 = {color8}

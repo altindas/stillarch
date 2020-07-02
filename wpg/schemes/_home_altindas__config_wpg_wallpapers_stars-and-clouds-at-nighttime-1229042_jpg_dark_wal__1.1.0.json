@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/altindas/.config/wpg/wallpapers/stars-and-clouds-at-nighttime-1229042.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0B0D13",
+        "foreground": "#b6b5b8",
+        "cursor": "#b6b5b8"
+    },
+    "colors": {
+        "color0": "#0B0D13",
+        "color1": "#645339",
+        "color2": "#2F3548",
+        "color3": "#3C4253",
+        "color4": "#4F4D4C",
+        "color5": "#6A6461",
+        "color6": "#86786C",
+        "color7": "#b6b5b8",
+        "color8": "#7f7e80",
+        "color9": "#645339",
+        "color10": "#2F3548",
+        "color11": "#3C4253",
+        "color12": "#4F4D4C",
+        "color13": "#6A6461",
+        "color14": "#86786C",
+        "color15": "#b6b5b8"
+    }
+}

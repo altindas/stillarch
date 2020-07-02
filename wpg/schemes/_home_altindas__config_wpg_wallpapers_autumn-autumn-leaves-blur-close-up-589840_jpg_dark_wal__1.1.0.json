@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/altindas/.config/wpg/wallpapers/autumn-autumn-leaves-blur-close-up-589840.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#080E14",
+        "foreground": "#b0c5d5",
+        "cursor": "#b0c5d5"
+    },
+    "colors": {
+        "color0": "#080E14",
+        "color1": "#C53714",
+        "color2": "#6B8478",
+        "color3": "#EBA033",
+        "color4": "#366A87",
+        "color5": "#55738C",
+        "color6": "#6B90A5",
+        "color7": "#b0c5d5",
+        "color8": "#7b8995",
+        "color9": "#C53714",
+        "color10": "#6B8478",
+        "color11": "#EBA033",
+        "color12": "#366A87",
+        "color13": "#55738C",
+        "color14": "#6B90A5",
+        "color15": "#b0c5d5"
+    }
+}

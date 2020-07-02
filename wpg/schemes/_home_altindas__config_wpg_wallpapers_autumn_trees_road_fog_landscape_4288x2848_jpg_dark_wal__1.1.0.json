@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/altindas/.config/wpg/wallpapers/autumn_trees_road_fog_landscape_4288x2848.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0a0908",
+        "foreground": "#beb8bc",
+        "cursor": "#beb8bc"
+    },
+    "colors": {
+        "color0": "#0a0908",
+        "color1": "#5A4F4D",
+        "color2": "#981C13",
+        "color3": "#C5523C",
+        "color4": "#A36251",
+        "color5": "#B18967",
+        "color6": "#E1986B",
+        "color7": "#beb8bc",
+        "color8": "#858083",
+        "color9": "#5A4F4D",
+        "color10": "#981C13",
+        "color11": "#C5523C",
+        "color12": "#A36251",
+        "color13": "#B18967",
+        "color14": "#E1986B",
+        "color15": "#beb8bc"
+    }
+}
