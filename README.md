@@ -23,4 +23,4 @@ Dropdown File Manager - MC
 https://streamable.com/r437bi
 
 Dropdown Terminal
-https://streamable.com/ll1dxk
+![](https://streamable.com/ll1dxk)
