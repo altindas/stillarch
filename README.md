@@ -1,8 +1,8 @@
 Dropdown File Manager - MC --> Click left to watch video.
-[![Watch the video](https://www.pngkey.com/png/detail/94-945004_video-play-bar-png-youtube-video-player-overlay.png)](https://streamable.com/r437bi)
+[![Watch the video](https://www.teleradiopadrepio.it/wp-content/uploads/Youtube-Player-116.png)](https://streamable.com/r437bi)
 
 Dropdown Terminal --> Click left to watch video.
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://streamable.com/ll1dxk)
+[![Watch the video](https://www.teleradiopadrepio.it/wp-content/uploads/Youtube-Player-116.png)](https://streamable.com/ll1dxk)
 
 Spotui & Music bar pop-up
 ![Image description](https://github.com/altindas/stillarch/blob/master/Screenshots/2020-07-01_22:06:10_FS.png)
